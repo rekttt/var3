@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="de71f816efb54173b82b01de23eb65dd" Name="Diagram1">
+        <EntityTypeShape EntityType="vitModel.Car" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.Driver" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.DriversCars" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.Incident" Width="1.5" PointX="6" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.IncidentsVolations" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.Inspector" Width="1.5" PointX="3.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.State" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="vitModel.Violation" Width="1.5" PointX="7.75" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="vitModel.FK_DriversCars_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="vitModel.FK_Incident_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="vitModel.FK_DriversCars_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="vitModel.FK_Incident_Driver" ManuallyRouted="false" />
+        <AssociationConnector Association="vitModel.FK_Incident_Inspector" ManuallyRouted="false" />
+        <AssociationConnector Association="vitModel.FK_IncidentsVolations_State" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

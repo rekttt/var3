@@ -1,0 +1,58 @@
+﻿<Page x:Class="var3.MainPAg"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:var3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPAg">
+
+    <Grid Background="#302092">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Image Source="C:\Users\c1own\Desktop\var3\var3\Resourse\Logo.png" Height="146"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10" HorizontalAlignment="Center">
+            <Label Content="Нарушение" FontSize="26" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="10,0,0,10" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200">
+            <Label Content="Введите наименование"/>
+            <TextBox Width="200" HorizontalAlignment="Left" TextChanged="SearchFio" x:Name="inputNameSearch"/>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Button FontSize="20" Click="GoViolation" Content="Нарушение" Margin="30"/>
+            <Button FontSize="20" Click="GoDrivers" Content="Водители" Margin="30"/>
+            <Button FontSize="20" Click="GoCars" Content="Автомобили" Margin="30"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <DataGrid Name="ViolationTable" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Наименование" Width="2*" Binding="{Binding title}"/>
+                    <DataGridTextColumn Header="Штраф" Width="140" Binding="{Binding penaltyRange}"/>
+                    <DataGridTextColumn Header="Лишение прав" Width="2*" Binding="{Binding deprivationLicense}"/>
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Редактировать" Click="EditViol"/>
+                        <MenuItem Header="Удалить" Click="DeleteViol"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="2">
+            <Button Content="Добавить" Click="GoAddViolation" Width="100"/>
+           
+        </StackPanel>
+    </Grid>
+</Page>

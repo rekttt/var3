@@ -1,0 +1,43 @@
+﻿<Page x:Class="var3.AddCars"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:var3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddCars">
+
+    <Grid Background="#302092">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Добавление Автомобили" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" />
+        <Label Content="Гос.Номер:" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <Label Content="Марка:" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <Label Content="Модель:" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <Label Content="Цвет" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <Label Content="Год выпуска" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <Label Content="Фио текущего владельца" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="18"/>
+        <TextBox Grid.Column="1" Name="numBox" Grid.Row="1" Height="30" Width="200"/>
+        <TextBox Grid.Column="1" Name="markBoxq" Grid.Row="2" Height="30" Width="200"/>
+        <TextBox Grid.Column="1" Name="modelBox" Grid.Row="3" Height="30" Width="200"/>
+        <TextBox Grid.Column="1" Name="colorBox" Grid.Row="4" Height="30" Width="200"/>
+        <TextBox Grid.Column="1" Name="yearBox" Grid.Row="5" Height="30" Width="200"/>
+        <TextBox Grid.Column="1" Name="dateBox" Grid.Row="6" Height="30" Width="200"/>
+
+        <Button Content="Добавить" Grid.ColumnSpan="2" Width="100" Height="40" FontSize="20" Grid.Row="8" Click="AddNewCar" />
+    </Grid>
+</Page>
